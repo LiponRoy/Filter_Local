@@ -4,6 +4,8 @@ export const products = [
 		name: 'Smartphone',
 		category: 'Electronics',
 		brand: 'BrandA',
+		size: '32',
+        color: 'Blue',
 		price: 699,
 	},
 	{
@@ -11,6 +13,8 @@ export const products = [
 		name: 'Headphones',
 		category: 'Electronics',
 		brand: 'BrandB',
+		size: '64',
+        color: 'Green',
 		price: 199,
 	},
 	{
@@ -18,6 +22,8 @@ export const products = [
 		name: 'Laptop',
 		category: 'Electronics',
 		brand: 'BrandA',
+		size: '32',
+        color: 'Blue',
 		price: 999,
 	},
 	{
@@ -25,6 +31,8 @@ export const products = [
 		name: 'Tablet',
 		category: 'Electronics',
 		brand: 'BrandB',
+		size: '64',
+        color: 'Green',
 		price: 499,
 	},
 	{
@@ -32,6 +40,8 @@ export const products = [
 		name: 'Running Shoes',
 		category: 'Footwear',
 		brand: 'BrandA',
+		size: '32',
+        color: 'Blue',
 		price: 120,
 	},
 	{
@@ -39,6 +49,8 @@ export const products = [
 		name: 'Sandals',
 		category: 'Footwear',
 		brand: 'BrandB',
+		size: '64',
+        color: 'Green',
 		price: 45,
 	},
 	{
@@ -46,6 +58,8 @@ export const products = [
 		name: 'T-shirt',
 		category: 'Clothing',
 		brand: 'BrandA',
+		size: '32',
+        color: 'Blue',
 		price: 19,
 	},
 	{
@@ -53,9 +67,13 @@ export const products = [
 		name: 'Jeans',
 		category: 'Clothing',
 		brand: 'BrandB',
+		size: '64',
+        color: 'Green',
 		price: 49,
 	},
 ];
 
 export const categories = ['Clothing', 'Footwear', 'Electronics'];
 export const brand = ['BrandA', 'BrandB'];
+export const sizes = ['32', '64'];
+export const colors = ['Blue', 'Green'];
