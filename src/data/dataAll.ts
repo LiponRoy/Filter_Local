@@ -1,115 +1,171 @@
-
-interface Iproduct{
-	  id: number,
-	  brand: string,
-	  color: string,
-	  category: string,
-	  price: number,
-	  name: string,
+interface Iproduct {
+  id: number;
+  brand: string;
+  color: string;
+  category: string;
+  price: number;
+  name: string;
+  fastestDelivery: number; // minutes
+  distance: number; // km
+  topRated: number; // rating out of 5
+  cuisines: string[]; // new field
 }
 
-export const products:Iproduct[] = [
-	{
-	  "id": 1,
-	  "brand": "Dell",
-	  "color": "Black",
-	  "category": "Gaming",
-	  "price": 1200,
-	  "name": "Dell Inspiron 15"
-	},
-	{
-	  "id": 2,
-	  "brand": "Dell",
-	  "color": "Silver",
-	  "category": "Ultrabook",
-	  "price": 1500,
-	  "name": "Dell XPS 13"
-	},
-	{
-	  "id": 3,
-	  "brand": "Dell",
-	  "color": "Red",
-	  "category": "Business",
-	  "price": 1100,
-	  "name": "Dell Latitude 7420"
-	},
-	{
-	  "id": 4,
-	  "brand": "HP",
-	  "color": "Black",
-	  "category": "Gaming",
-	  "price": 1300,
-	  "name": "HP Omen 15"
-	},
-	{
-	  "id": 5,
-	  "brand": "HP",
-	  "color": "Silver",
-	  "category": "Ultrabook",
-	  "price": 1400,
-	  "name": "HP Spectre x360"
-	},
-	{
-	  "id": 6,
-	  "brand": "HP",
-	  "color": "Red",
-	  "category": "Business",
-	  "price": 1200,
-	  "name": "HP EliteBook 840"
-	},
-	{
-	  "id": 7,
-	  "brand": "Apple",
-	  "color": "Black",
-	  "category": "Gaming",
-	  "price": 2000,
-	  "name": "MacBook Pro 16"
-	},
-	{
-	  "id": 8,
-	  "brand": "Apple",
-	  "color": "Silver",
-	  "category": "Ultrabook",
-	  "price": 1800,
-	  "name": "MacBook Air M1"
-	},
-	{
-	  "id": 9,
-	  "brand": "Apple",
-	  "color": "Red",
-	  "category": "Business",
-	  "price": 1700,
-	  "name": "MacBook Pro 13"
-	},
-	{
-	  "id": 10,
-	  "brand": "Dell",
-	  "color": "Black",
-	  "category": "Ultrabook",
-	  "price": 1350,
-	  "name": "Dell XPS 15"
-	},
-	{
-	  "id": 11,
-	  "brand": "HP",
-	  "color": "Silver",
-	  "category": "Gaming",
-	  "price": 1450,
-	  "name": "HP Pavilion Gaming"
-	},
-	{
-	  "id": 12,
-	  "brand": "Apple",
-	  "color": "Red",
-	  "category": "Ultrabook",
-	  "price": 1600,
-	  "name": "MacBook Air M2"
-	}
-  ]
+// All possible cuisines in the dataset for the filter UI
+export const allCuisines = [
+  "Indian",
+  "Grill",
+  "Italian",
+  "Fast Food",
+  "Chinese",
+  "Japanese",
+  "Mexican",
+  "Vegan",
+];
 
-
-export const categories:string[] = ['Clothing', 'Footwear', 'Electronics'];
-
-
-//export const brand = ['BrandA', 'BrandB'];
-
+export const products: Iproduct[] = [
+  {
+	id: 1,
+	brand: "Dell",
+	color: "Black",
+	category: "Gaming",
+	price: 1200,
+	name: "Dell Inspiron 15",
+	fastestDelivery: 30,
+	distance: 5,
+	topRated: 4.3,
+	cuisines: ["Indian", "Grill"],
+  },
+  {
+	id: 2,
+	brand: "Dell",
+	color: "Silver",
+	category: "Ultrabook",
+	price: 1500,
+	name: "Dell XPS 13",
+	fastestDelivery: 45,
+	distance: 10,
+	topRated: 4.5,
+	cuisines: ["Italian"],
+  },
+  {
+	id: 3,
+	brand: "Dell",
+	color: "Red",
+	category: "Business",
+	price: 1100,
+	name: "Dell Latitude 7420",
+	fastestDelivery: 35,
+	distance: 7,
+	topRated: 4.0,
+	cuisines: ["Grill", "Fast Food"],
+  },
+  {
+	id: 4,
+	brand: "HP",
+	color: "Black",
+	category: "Gaming",
+	price: 1300,
+	name: "HP Omen 15",
+	fastestDelivery: 25,
+	distance: 3,
+	topRated: 4.6,
+	cuisines: ["Chinese"],
+  },
+  {
+	id: 5,
+	brand: "HP",
+	color: "Silver",
+	category: "Ultrabook",
+	price: 1400,
+	name: "HP Spectre x360",
+	fastestDelivery: 50,
+	distance: 12,
+	topRated: 4.4,
+	cuisines: ["Japanese"],
+  },
+  {
+	id: 6,
+	brand: "HP",
+	color: "Red",
+	category: "Business",
+	price: 1200,
+	name: "HP EliteBook 840",
+	fastestDelivery: 40,
+	distance: 8,
+	topRated: 4.1,
+	cuisines: ["Mexican"],
+  },
+  {
+	id: 7,
+	brand: "Apple",
+	color: "Black",
+	category: "Gaming",
+	price: 2000,
+	name: "MacBook Pro 16",
+	fastestDelivery: 20,
+	distance: 2,
+	topRated: 4.8,
+	cuisines: ["Indian", "Vegan"],
+  },
+  {
+	id: 8,
+	brand: "Apple",
+	color: "Silver",
+	category: "Ultrabook",
+	price: 1800,
+	name: "MacBook Air M1",
+	fastestDelivery: 30,
+	distance: 5,
+	topRated: 4.7,
+	cuisines: ["Italian", "Fast Food"],
+  },
+  {
+	id: 9,
+	brand: "Apple",
+	color: "Red",
+	category: "Business",
+	price: 1700,
+	name: "MacBook Pro 13",
+	fastestDelivery: 22,
+	distance: 4,
+	topRated: 4.9,
+	cuisines: ["Grill"],
+  },
+  {
+	id: 10,
+	brand: "Dell",
+	color: "Black",
+	category: "Ultrabook",
+	price: 1350,
+	name: "Dell XPS 15",
+	fastestDelivery: 33,
+	distance: 6,
+	topRated: 4.2,
+	cuisines: ["Vegan", "Japanese"],
+  },
+  {
+	id: 11,
+	brand: "HP",
+	color: "Silver",
+	category: "Gaming",
+	price: 1450,
+	name: "HP Pavilion Gaming",
+	fastestDelivery: 28,
+	distance: 4,
+	topRated: 4.3,
+	cuisines: ["Mexican", "Fast Food"],
+  },
+  {
+	id: 12,
+	brand: "Apple",
+	color: "Red",
+	category: "Ultrabook",
+	price: 1600,
+	name: "MacBook Air M2",
+	fastestDelivery: 31,
+	distance: 5,
+	topRated: 4.6,
+	cuisines: ["Italian", "Indian"],
+  },
+];

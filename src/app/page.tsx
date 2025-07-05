@@ -1,4 +1,5 @@
-import Test from "@/components/Test";
+
+import Test from "@/components/TestX";
 import Image from "next/image";
 
 export default function Home() {
